@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamAI local — Conditions</title>
+<style>
+  :root {
+    --paper: #faf9fc; --ink: #1c1428; --ink-soft: #5b5468; --ink-faint: #8a8398;
+    --accent: #6d3fc4; --accent-soft: #ece5fa; --line: #e4dfee; --code-bg: #f1edf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #16121e; --ink: #ece8f4; --ink-soft: #b0a8c2; --ink-faint: #7c7390; --accent: #b48cf0; --accent-soft: #2a2140; --line: #322a44; --code-bg: #251e36; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px; line-height: 1.65; margin: 0; padding: 4.5rem 1.5rem 6rem;
+  }
+  .doc { max-width: 42rem; margin: 0 auto; }
+  .eyebrow {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.78rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.1rem;
+  }
+  .eyebrow::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent); flex: none; }
+  h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.7rem); line-height: 1.15;
+    letter-spacing: -0.01em; margin: 0 0 0.9rem;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 2.6rem; }
+  .meta strong { color: var(--ink); font-weight: 600; }
+  hr.rule { border: none; border-top: 1px solid var(--line); margin: 0 0 2.6rem; }
+  section.clause { margin-bottom: 2.3rem; }
+  .clause-head { display: flex; align-items: baseline; gap: 0.85rem; margin-bottom: 0.7rem; }
+  .clause-num { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 600; font-size: 1.05rem; color: var(--accent); flex: none; min-width: 1.6rem; }
+  .clause-title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 600; font-size: 1.22rem; letter-spacing: -0.005em; }
+  .clause-body { max-width: 40rem; color: var(--ink); }
+  .clause-body p { margin: 0 0 0.85rem; }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul { margin: 0.6rem 0 0.85rem; padding-left: 1.3rem; }
+  .clause-body li { margin-bottom: 0.35rem; }
+  code, .scope { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 0.86em; background: var(--code-bg); color: var(--accent); padding: 0.1em 0.4em; border-radius: 0.3em; }
+  .callout { background: var(--accent-soft); border-radius: 0.6rem; padding: 1.1rem 1.3rem; color: var(--ink); font-size: 0.95rem; }
+  .callout strong { color: var(--accent); }
+  footer { margin-top: 3.5rem; padding-top: 1.6rem; border-top: 1px solid var(--line); color: var(--ink-faint); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 560px) { body { padding: 3rem 1.15rem 4rem; } .clause-head { flex-direction: column; gap: 0.15rem; } }
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="eyebrow">StreamAI local · Document juridique</div>
+  <h1>Conditions d'utilisation</h1>
+  <div class="meta">
+    <span>Dernière mise à jour : <strong>17 août 2026</strong></span>
+    <span>Application à usage strictement personnel</span>
+  </div>
+  <hr class="rule">
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">1</span>
+      <span class="clause-title">Nature de l'application</span>
+    </div>
+    <div class="clause-body">
+      <p><strong>StreamAI local</strong> est un outil personnel développé et utilisé par un seul et même individu, pour automatiser des tâches liées à sa propre activité de streaming (préparation de vidéos courtes, veille, planning). Ce n'est pas un service public : personne d'autre ne peut créer de compte ni s'y connecter.</p>
+      <p>L'application tourne entièrement en local, sur l'ordinateur de son propriétaire. Elle n'est ni distribuée, ni vendue, ni proposée à des tiers.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">2</span>
+      <span class="clause-title">Utilisation de l'API TikTok</span>
+    </div>
+    <div class="clause-body">
+      <p>L'application se connecte uniquement au compte TikTok de son propriétaire, avec son autorisation explicite, pour :</p>
+      <ul>
+        <li>lire les informations de base du compte (<span class="scope">user.info.basic</span>) ;</li>
+        <li>déposer des vidéos déjà préparées dans la boîte de réception du compte, en brouillon (<span class="scope">video.upload</span>).</li>
+      </ul>
+      <div class="callout"><strong>Aucune publication automatique.</strong> L'application ne demande jamais la permission de publier directement — la vidéo reste en brouillon dans l'application TikTok jusqu'à ce que le propriétaire du compte la valide et la publie lui-même.</div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">3</span>
+      <span class="clause-title">Aucune garantie</span>
+    </div>
+    <div class="clause-body">
+      <p>Projet personnel fourni tel quel, sans garantie d'aucune sorte. Le propriétaire est seul responsable de son usage et de la conformité de son compte TikTok aux règles de la plateforme.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">4</span>
+      <span class="clause-title">Contact</span>
+    </div>
+    <div class="clause-body">
+      <p>Pour toute question relative à cette application : <a href="mailto:theosab37@gmail.com">theosab37@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    Voir aussi la <a href="privacy.html">politique de confidentialité</a> associée à cette application.
+  </footer>
+</div>
+</body>
+</html>
