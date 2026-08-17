@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamAI local</title>
+<style>
+  :root {
+    --paper: #faf9fc; --ink: #1c1428; --ink-soft: #5b5468; --ink-faint: #8a8398;
+    --accent: #6d3fc4; --accent-soft: #ece5fa; --line: #e4dfee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #16121e; --ink: #ece8f4; --ink-soft: #b0a8c2; --ink-faint: #7c7390; --accent: #b48cf0; --accent-soft: #2a2140; --line: #322a44; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px; line-height: 1.65; margin: 0; padding: 4.5rem 1.5rem 6rem;
+  }
+  .doc { max-width: 38rem; margin: 0 auto; }
+  .eyebrow {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.78rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.1rem;
+  }
+  .eyebrow::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent); flex: none; }
+  h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.7rem); line-height: 1.15;
+    letter-spacing: -0.01em; margin: 0 0 0.9rem;
+  }
+  p.lead { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 2.6rem; }
+  hr.rule { border: none; border-top: 1px solid var(--line); margin: 0 0 2.2rem; }
+  .links { display: flex; flex-direction: column; gap: 0.8rem; }
+  .links a {
+    color: var(--accent); text-decoration: none; font-weight: 600;
+    padding: 0.9rem 1.1rem; background: var(--accent-soft); border-radius: 0.6rem;
+  }
+  .links a:hover { text-decoration: underline; }
+  footer { margin-top: 3.5rem; padding-top: 1.6rem; border-top: 1px solid var(--line); color: var(--ink-faint); font-size: 0.85rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="doc">
+    <div class="eyebrow">Application personnelle</div>
+    <h1>StreamAI local</h1>
+    <p class="lead">Outil personnel qui prépare des vidéos courtes (recadrage, sous-titres, légende) à partir de mes propres streams, à usage strictement individuel.</p>
+    <hr class="rule">
+    <div class="links">
+      <a href="terms.html">Conditions d'utilisation</a>
+      <a href="privacy.html">Politique de confidentialité</a>
+    </div>
+    <footer>Contact : <a href="mailto:theosab37@gmail.com">theosab37@gmail.com</a></footer>
+  </div>
+</body>
+</html>
