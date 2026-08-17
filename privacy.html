@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamAI local — Confidentialité</title>
+<style>
+  :root {
+    --paper: #faf9fc; --ink: #1c1428; --ink-soft: #5b5468; --ink-faint: #8a8398;
+    --accent: #6d3fc4; --accent-soft: #ece5fa; --line: #e4dfee; --code-bg: #f1edf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #16121e; --ink: #ece8f4; --ink-soft: #b0a8c2; --ink-faint: #7c7390; --accent: #b48cf0; --accent-soft: #2a2140; --line: #322a44; --code-bg: #251e36; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px; line-height: 1.65; margin: 0; padding: 4.5rem 1.5rem 6rem;
+  }
+  .doc { max-width: 42rem; margin: 0 auto; }
+  .eyebrow {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.78rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.1rem;
+  }
+  .eyebrow::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent); flex: none; }
+  h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.7rem); line-height: 1.15;
+    letter-spacing: -0.01em; margin: 0 0 0.9rem;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 2.6rem; }
+  .meta strong { color: var(--ink); font-weight: 600; }
+  hr.rule { border: none; border-top: 1px solid var(--line); margin: 0 0 2.6rem; }
+  section.clause { margin-bottom: 2.3rem; }
+  .clause-head { display: flex; align-items: baseline; gap: 0.85rem; margin-bottom: 0.7rem; }
+  .clause-num { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 600; font-size: 1.05rem; color: var(--accent); flex: none; min-width: 1.6rem; }
+  .clause-title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 600; font-size: 1.22rem; letter-spacing: -0.005em; }
+  .clause-body { max-width: 40rem; color: var(--ink); }
+  .clause-body p { margin: 0 0 0.85rem; }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul { margin: 0.6rem 0 0.85rem; padding-left: 1.3rem; }
+  .clause-body li { margin-bottom: 0.35rem; }
+  table.data-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0 1rem; font-size: 0.92rem; }
+  table.data-table th, table.data-table td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.data-table th { color: var(--ink-soft); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  code, .scope { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 0.86em; background: var(--code-bg); color: var(--accent); padding: 0.1em 0.4em; border-radius: 0.3em; }
+  .callout { background: var(--accent-soft); border-radius: 0.6rem; padding: 1.1rem 1.3rem; color: var(--ink); font-size: 0.95rem; }
+  .callout strong { color: var(--accent); }
+  footer { margin-top: 3.5rem; padding-top: 1.6rem; border-top: 1px solid var(--line); color: var(--ink-faint); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 560px) { body { padding: 3rem 1.15rem 4rem; } .clause-head { flex-direction: column; gap: 0.15rem; } table.data-table { display: block; overflow-x: auto; } }
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="eyebrow">StreamAI local · Document juridique</div>
+  <h1>Politique de confidentialité</h1>
+  <div class="meta">
+    <span>Dernière mise à jour : <strong>17 août 2026</strong></span>
+    <span>Application à usage strictement personnel</span>
+  </div>
+  <hr class="rule">
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">1</span>
+      <span class="clause-title">Qui utilise cette application</span>
+    </div>
+    <div class="clause-body">
+      <p><strong>StreamAI local</strong> est un outil personnel, utilisé par une seule personne (son développeur), sur son propre ordinateur. Aucun autre utilisateur, aucun compte tiers, aucune donnée d'aucune autre personne n'y transite.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">2</span>
+      <span class="clause-title">Données consultées sur TikTok</span>
+    </div>
+    <div class="clause-body">
+      <p>L'application accède uniquement, via l'API officielle TikTok et avec l'autorisation explicite du propriétaire du compte, aux éléments suivants :</p>
+      <table class="data-table">
+        <tr><th>Autorisation</th><th>Usage</th></tr>
+        <tr><td><span class="scope">user.info.basic</span></td><td>Confirmer l'identité du compte connecté.</td></tr>
+        <tr><td><span class="scope">video.upload</span></td><td>Déposer une vidéo préparée dans la boîte de réception du compte, en brouillon.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">3</span>
+      <span class="clause-title">Où vont les données</span>
+    </div>
+    <div class="clause-body">
+      <p>Nulle part ailleurs. Tout le traitement (montage vidéo, sous-titres, rédaction de la légende) se fait localement, sur l'ordinateur du propriétaire.</p>
+      <div class="callout"><strong>Aucun serveur tiers.</strong> Aucune donnée n'est envoyée, vendue ou partagée à une entreprise ou un service externe — les seuls échanges réseau sont les appels directs à l'API officielle TikTok, décrits ci-dessus.</div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">4</span>
+      <span class="clause-title">Conservation et suppression</span>
+    </div>
+    <div class="clause-body">
+      <p>Les fichiers préparés restent sur l'ordinateur du propriétaire jusqu'à ce qu'il les supprime lui-même. Aucune copie n'existe ailleurs. L'autorisation d'accès au compte TikTok peut être révoquée à tout moment depuis les paramètres du compte TikTok.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">5</span>
+      <span class="clause-title">Contact</span>
+    </div>
+    <div class="clause-body">
+      <p>Pour toute question relative à cette politique : <a href="mailto:theosab37@gmail.com">theosab37@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    Voir aussi les <a href="terms.html">conditions d'utilisation</a> associées à cette application.
+  </footer>
+</div>
+</body>
+</html>
